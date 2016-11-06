@@ -2,21 +2,26 @@ html
 	head
 		title Rpi remote
 		meta(name="viewport",content="width=device-width, initial-scale=1")
+		meta(http-equiv="Content-Security-Policy", content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;")
+		meta(name="format-detection" content="telenode_modules/phone=no")
+		meta(name="msapplication-tap-highlight" content="no")
+		meta(name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width")
 		link(rel='stylesheet', href='css/main.css')
 		link(rel='stylesheet', href='navbar/navbar.css')
 		link(rel='stylesheet', href='sensors/sensors.css')
-		link(rel='stylesheet', href='font-awesome/css/font-awesome.css')
+		link(rel='stylesheet', href='node_modules/font-awesome/css/font-awesome.css')
 
 	body(ng-app='app')
-		div(ng-controller='rootController as vm')
+		div(ng-controller='rootController as vm').app
 			div#modal
 			navbar
 			div#view-container(ng-class='vm.getDirection()')
 				div(ng-view)
 
-	script(src='angular/angular.js')
-	script(src='angular-animate/angular-animate.js')
-	script(src='angular-route/angular-route.js')
+	script(src='cordova.js')
+	script(src='node_modules/angular/angular.js')
+	script(src='node_modules/angular-animate/angular-animate.js')
+	script(src='node_modules/angular-route/angular-route.js')
 	script(src='app.module.js')
 	script(src='route.config.js')
 	script(src='services/navigation.service.js')

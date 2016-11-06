@@ -4,9 +4,11 @@ var stylus = require('gulp-stylus');
 
 var config = {
 	paths: {
-		dist: './dist/client/',
+		dist: './www',
 		js: ['./src/client/**/*.js', './src/client/*.js'],
+		json: ['./src/client/**/*.json', './src/client/*.json'],
 		html: ['./src/client/**/*.jade', './src/client/*.jade'],
+		vendor: './src/client/node_modules/**/*',
 		css: './src/client/**/*.stylus'
 	}
 };
@@ -30,10 +32,20 @@ gulp.task('js', function() {
 		.pipe(gulp.dest(config.paths.dist));
 });
 
+gulp.task('json', function() {
+	gulp.src(config.paths.json)
+		.pipe(gulp.dest(config.paths.dist));
+});
+
+gulp.task('vendor', function() {
+	gulp.src(config.paths.vendor)
+		.pipe(gulp.dest(config.paths.dist + '/node_modules'));
+});
+
 gulp.task('watch', function() {
 	gulp.watch(config.paths.html, ['html']);
 	gulp.watch(config.paths.css, ['css']);
 	gulp.watch(config.paths.js, ['js']);
 });
 
-gulp.task('default', ['html', 'css', 'js', 'watch']);
+gulp.task('default', ['html', 'css', 'js', 'json', 'vendor', 'watch']);

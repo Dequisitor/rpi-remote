@@ -1,0 +1,17 @@
+{
+  "name": "rpi-remote",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.1.1"
+  }
+}

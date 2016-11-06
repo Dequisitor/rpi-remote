@@ -6,7 +6,7 @@ navbarController.$inject = ['navigationService'];
 function navbarDirective() {
 	return {
 		restrict: 'AE',
-		templateUrl: '/navbar/navbar.html',
+		templateUrl: 'navbar/navbar.html',
 		controller: navbarController,
 		controllerAs: 'navbar'
 	};
