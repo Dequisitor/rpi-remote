@@ -1,0 +1,29 @@
+html
+	head
+		title Rpi remote
+		meta(name="viewport",content="width=device-width, initial-scale=1")
+		link(rel='stylesheet', href='css/main.css')
+		link(rel='stylesheet', href='navbar/navbar.css')
+		link(rel='stylesheet', href='sensors/sensors.css')
+		link(rel='stylesheet', href='font-awesome/css/font-awesome.css')
+
+	body(ng-app='app')
+		div(ng-controller='rootController as vm')
+			div#modal
+			navbar
+			div#view-container(ng-class='vm.getDirection()')
+				div(ng-view)
+
+	script(src='angular/angular.js')
+	script(src='angular-animate/angular-animate.js')
+	script(src='angular-route/angular-route.js')
+	script(src='app.module.js')
+	script(src='route.config.js')
+	script(src='services/navigation.service.js')
+	script(src='navbar/navbar.directive.js')
+	script(src='root/root.controller.js')
+	script(src='home/home.controller.js')
+	script(src='lights/lights.controller.js')
+	script(src='sensors/sensors.controller.js')
+	script(src='sensors/sensor-details.controller.js')
+	script(src='services/sensor.service.js')

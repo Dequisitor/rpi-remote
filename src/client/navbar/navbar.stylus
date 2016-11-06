@@ -1,0 +1,27 @@
+.navbar
+	display flex
+	background-color #333
+	color white
+	margin -10px -10px 10px -10px
+	height 50px
+	font-size 1.3em
+
+	a
+		flex-grow 0
+		margin 0 10px
+		line-height 50px
+		width 50px
+
+		.fa
+			line-height 50px
+			margin 0 5px
+
+	p
+		flex-grow 1
+		line-height 50px
+		margin 0
+
+	#back.ng-hide
+		display block !important
+		opacity 0
+

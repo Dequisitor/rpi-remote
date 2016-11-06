@@ -1,0 +1,6 @@
+div.navbar
+	a#back(ng-click="navbar.back()", ng-show="navbar.isBackAvailable()")
+		span.fa.fa-chevron-left
+	p.center {{navbar.getTitle()}}
+	a#menu
+		span.fa.fa-bars(ng-click="navbar.menu()")

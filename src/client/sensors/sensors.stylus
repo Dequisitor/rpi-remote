@@ -1,0 +1,37 @@
+.sensors
+	color black
+
+	.list-container
+
+		.list-item
+			display flex
+			border-width 0 0 1px 0
+			border-color gray
+			border-style solid
+			padding 10px 20px
+
+			.head
+				display flex
+				flex-direction column
+				flex-grow 1
+				.title
+					font-size 1.3em
+					margin 2px 0
+				.name
+					font-size .8em
+					opacity .7
+
+			.tail
+				display flex
+				flex-direction column
+				.value
+					display flex
+					font-size 1.5em
+					.num
+						flex-grow 1
+						text-align right
+				.stamp
+					display flex
+					flex-direction column
+					font-size .8em
+					opacity .7

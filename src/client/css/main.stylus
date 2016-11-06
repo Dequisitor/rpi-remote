@@ -1,0 +1,69 @@
+.page
+	background-color white
+
+.row
+	display flex
+	padding 10px 20px
+
+.center
+	text-align center
+
+.button
+	flex-grow 1
+	flex-basis 0
+	color white
+	background linear-gradient(125deg, #000 0%, #000 70%, #222 75%, #999 100%)
+	box-shadow 3px 3px 1px 0px gray
+	border none
+	margin 0px 5px
+	height 40px
+	text-align center
+	text-transform uppercase
+	line-height 40px
+	font-size 1em
+	text-decoration none
+.button.large
+	height 60px
+	line-height 60px
+	font-size: 1.2em
+.button.red
+	background linear-gradient(125deg, #c33 0%, #c33 70%, #c44 75%, #fbb 100%)
+.button.green
+	background linear-gradient(125deg, #3a3 0%, #3a3 70%, #6a6 75%, #bfb 100%)
+.button.blue
+	background linear-gradient(125deg, #44c 0%, #55c 60%, #77c 75%, #bbf 100%)
+.button.white
+	color black
+	background linear-gradient(125deg, white 0%, white 70%, #ddd 75%, #999 100%)
+.button.orange
+	background linear-gradient(125deg, #c73 0%, #c73 70%, #d84 75%, #fca 100%)
+
+#view-container > div
+	position absolute
+	top 50px
+	left 0
+	right 0
+	bottom 0
+	width 100%
+
+#view-container .ng-enter
+#view-container .ng-leave
+	transition left .3s ease
+
+#view-container.forward .ng-enter 
+	left 100%
+#view-container.forward .ng-enter-active 
+	left 0
+#view-container.forward .ng-leave 
+	left 0
+#view-container.forward .ng-leave-active 
+	left -100%
+
+#view-container.back .ng-enter 
+	left -100%
+#view-container.back .ng-enter-active 
+	left 0
+#view-container.back .ng-leave 
+	left 0
+#view-container.back .ng-leave-active 
+	left 100%

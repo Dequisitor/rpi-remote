@@ -1,0 +1,32 @@
+{
+  "name": "rpi-remote",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "express": "^4.14.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.1.1",
+    "morgan": "^1.7.0",
+    "nib": "^1.1.2",
+    "pug": "^2.0.0-beta6",
+    "stylus": "^0.54.5"
+  },
+  "devDependencies": {
+    "eslint": "^3.9.1",
+    "gulp": "^3.9.1",
+    "gulp-pug": "^3.1.0",
+    "gulp-stylus": "^2.6.0",
+    "htmlhint": "^0.9.13",
+    "pug-lint": "^2.3.0"
+  }
+}

@@ -1,0 +1,12 @@
+.page.sensors
+	div.list-container
+		div.list-item(ng-repeat="sensor in vm.sensors", ng-click="vm.loadDetails(sensor)")
+			span.head
+				span.title {{sensor.type}}
+				span.name {{sensor.name}}
+			span.tail
+				span.value
+					span.num {{sensor.lastValue}}
+					span.unit &nbsp;{{sensor.unit}}
+				span.stamp
+					span @{{sensor.lastEntry}}
